@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="bottom">
-        DBZ Memory Click Game! <img alt="react" src="assets/images/react.svg" />
+        DBZ Memory Click Game!
       </div>
     </footer>
   );
