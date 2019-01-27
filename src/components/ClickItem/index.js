@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function Clickitem(props) {
+function ClickItem(props) {
     return (
       <div
         role="img"
@@ -13,4 +13,4 @@ function Clickitem(props) {
     );
   }
   
-  export default Clickitem;
+  export default ClickItem;

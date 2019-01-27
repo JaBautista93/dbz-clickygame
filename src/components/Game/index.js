@@ -1,6 +1,4 @@
-import React, {
-    Component
-} from "react";
+import React, { Component } from "react";
 import Nav from "../Nav";
 import Header from "../Header";
 import Container from "../Container";
@@ -10,18 +8,14 @@ import data from "../../data.json";
 
 class Game extends Component {
     state = {
-        date,
+        data,
         score: 0,
         topScore: 0
-
-
     };
 
     componentDidMount() {
-        this.setState({
-            data: this.shuffleData(this.state.data)
-        });
-    }
+        this.setState({ data: this.shuffleData(this.state.data) });
+      }
 
     correctGuess = newData => {
         const {
@@ -78,9 +72,8 @@ class Game extends Component {
             return newItem;
         });
         guessedCorrectly
-            ?
-            this.correctGuess(newData) :
-            this.incorrectGuess(newData);
+            ? this.correctGuess(newData) 
+            : this.incorrectGuess(newData);
     };
 
     render() {
@@ -94,7 +87,7 @@ class Game extends Component {
                   key={item.id}
                   id={item.id}
                   shake={!this.state.score && this.state.topScore}
-                  handleClick={this.handleItemClick}
+                  handleClick={this.itemClick}
                   image={item.image}
                 />
               ))}
